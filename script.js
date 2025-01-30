@@ -13,3 +13,10 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
   const data = await response.json();
   alert(data.message);
 });
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+// Toggle navigation menu visibility
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});

@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ],
+    "disown-opener": "off",
+    "axe/name-role-value": "off",
+    "no-inline-styles": "off"
+  }
+}
