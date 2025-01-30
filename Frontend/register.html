@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="../imges/Rattel_Transperant.png">Rattel Academy</div>
+    <nav>
+      <a href="index.html"></a>
+      <button class="back-btn" onclick="window.history.back()" >
+        <i class="fas fa-arrow-left"></i> <!-- الأيقونة الخاصة بالرجوع -->
+      </button>
+      
+
+    </nav>
+  </header>
+  <main>
+    <section id="register">
+      <h1>Enroll Now</h1>
+      <p>Please fill in the form below to register:</p>
+      <form id="registrationForm">
+        <input type="text" placeholder="Full Name" name="name" required>
+        <input type="email" placeholder="Email Address" name="email" required>
+        <input type="text" placeholder="Phone Number" name="phone" required>
+        
+        <!-- عمر الطفل -->
+        <input type="number" placeholder="Child's Age" name="age" min="1" max="18" required>
+        
+        <!-- جنس الطفل -->
+        <div class="gender-section">
+          <label>Child's Gender:</label>
+          <div class="gender-options">
+            <label><input type="radio" name="child_gender" value="male" required> Male</label>
+            <label><input type="radio" name="child_gender" value="female" required> Female</label>
+          </div>
+        </div>
+        
+        <!-- الدورة -->
+        <label for="course1">Select Course 1:</label>
+        <select id="course1" name="course1" onchange="updateAvailableCourses(1)" required>
+          <option value="" disabled selected>Select a course</option>
+          <option value="quran">Quran</option>
+          <option value="arabic">Arabic</option>
+          <option value="serah">Serah</option>
+          <option value="islamic-studies">Islamic Studies</option>
+          <option value="tajweed">Tajweed</option>
+          <option value="nour-albian">Nour-Albian</option>
+        </select>
+
+        <button type="button" onclick="addCourse()">Add Another Course</button>
+
+        <!-- إضافة كورس ثاني -->
+        <div id="course2-container" style="display:none;">
+          <label for="course2">Select Course 2:</label>
+          <select id="course2" name="course2" onchange="updateAvailableCourses(2)">
+            <option value="" disabled selected>Select a course</option>
+            <option value="quran">Quran</option>
+            <option value="arabic">Arabic</option>
+            <option value="serah">Serah</option>
+            <option value="islamic-studies">Islamic Studies</option>
+            <option value="tajweed">Tajweed</option>
+            <option value="nour-albian">Nour-Albian</option>
+          </select>
+        </div>
+        
+        <!-- جنس المدرس -->
+        <div class="teacher-gender-section">
+          <label>Preferred Teacher's Gender:</label>
+          <div class="teacher-gender-options">
+            <label><input type="radio" name="teacher_gender" value="male" required> Male</label>
+            <label><input type="radio" name="teacher_gender" value="female" required> Female</label>
+            <label><input type="radio" name="teacher_gender" value="no_preference" required> No Preference</label>
+          </div>
+        </div>
+        
+        <!-- ملاحظات إضافية -->
+        <textarea placeholder="Additional Notes (optional)" name="notes"></textarea>
+        
+        <!-- زر الإرسال -->
+        <button type="submit">Submit</button>
+      </form>
+      
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Rattel Academy. All rights reserved.</p>
+  </footer>
+</body>
+
+<!-- كود الجافا سكربت -->
+<script>
+  let selectedCourses = [];
+
+  function updateAvailableCourses(courseNumber) {
+    const courseSelect = document.getElementById(`course${courseNumber}`);
+    const selectedValue = courseSelect.value;
+
+    // إضافة أو إزالة الدورة من المصفوفة عند التحديد
+    if (selectedValue && !selectedCourses.includes(selectedValue)) {
+      selectedCourses.push(selectedValue);
+    }
+
+    // إزالة الدورة المحددة من باقي القوائم
+    selectedCourses.forEach((course) => {
+      const otherCourseSelects = document.querySelectorAll('select');
+      otherCourseSelects.forEach((select) => {
+        if (select !== courseSelect) {
+          Array.from(select.options).forEach((option) => {
+            if (option.value === course) {
+              option.disabled = true;
+            }
+          });
+        }
+      });
+    });
+
+    // إذا كان هناك كورس تم اختياره في الدورة الثانية، نحدث خياراتها
+    if (courseNumber === 1 && selectedValue) {
+      document.getElementById('course2-container').style.display = 'block'; // إظهار حقل الدورة الثانية
+    }
+  }
+
+  function addCourse() {
+    // إظهار حقل اختيار الدورة الثانية
+    const course2Container = document.getElementById('course2-container');
+    if (course2Container.style.display === 'none') {
+      course2Container.style.display = 'block';
+    }
+  }
+</script>
+</html>

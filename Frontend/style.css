@@ -1,0 +1,543 @@
+/* الأساسيات */
+html {
+  scroll-behavior: smooth; /* التمرير السلس */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0 0 20px;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+/* الهيدر */
+header {
+  background-color: #002D56;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+header .logo img {
+    height: 70px; /* تحجيم الصورة */
+    margin-right: 10px; /* المسافة بين الصورة والنص */
+}
+header nav a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1em;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #FFA41C;
+}
+
+/* البانر */
+#hero {
+  background: linear-gradient(#ffc132, #FFA41C);
+  color: #002D56;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+#hero button {
+  background-color: #002D56;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#hero button:hover {
+  background-color: white;
+  color: #002D56;
+}
+
+/* الأقسام */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #002D56;
+}
+
+/* تعريف بالموقع */
+#about {
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #002D56;
+  margin-bottom: 20px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center; /* محاذاة النص والصورة في المنتصف عموديًا */
+  justify-content: space-between; /* توزيع العناصر */
+  gap: 20px; /* مسافة بين الصورة والنص */
+}
+
+.about-image {
+  width: 40%; /* الصورة تأخذ 40% من عرض الحاوية */
+  border-radius: 8px; /* حواف دائرية للصورة */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للصورة */
+}
+
+.about-text {
+  width: 55%; /* النص يأخذ 55% من عرض الحاوية */
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+#about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* الدورات */
+#courses {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+  width: calc(22.5% - 20px); /* عرض الكروسات بشكل متساوي في ثلاثة أعمدة */
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.card img {
+  width: 100%; /* الصورة هتاخد عرض الكارت بالكامل */
+  height: 250px; /* تحديد ارتفاع الصورة */
+  object-fit: cover; /* ضبط الصورة بحيث تغطي المساحة المحددة */
+  border-radius: 8px 8px 0 0; /* إضافة حواف دائرية للجزء العلوي من الصورة */
+  margin-bottom: 15px; /* إضافة مسافة بين الصورة والنص */
+}
+
+.card h3 {
+  font-size: 1.5em;
+  color: #002D56;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* الأسعار */
+#pricing {
+  padding: 40px;
+  background: linear-gradient(#ffc132, #FFA41C);
+  text-align: center;
+}
+
+#pricing h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #002D56;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center; /* وضع الكروت في المنتصف */
+  gap: 20px; /* المسافة بين الكروت */
+  flex-wrap: wrap; /* السماح بتغليف الكروت في صفوف إذا كانت الشاشة صغيرة */
+}
+
+.pricing-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px; /* عرض الكارت */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+  text-align: left; /* جعل النصوص بمحاذاة اليسار */
+  transition: transform 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px); /* تحريك الكارت عند التمرير فوقه */
+}
+
+.pricing-card h3 {
+  font-size: 1.5em;
+  color: #002D56;
+  margin-bottom: 10px;
+}
+
+.pricing-card p {
+  font-size: 1em;
+  color: #555;
+  margin: 5px 0;
+}
+
+
+/* قسم آراء العملاء */
+#testimonials {
+  background-color: #f9f9f9; /* لون خلفية خفيف */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 2em;
+  color: #002D56;
+  margin-bottom: 20px;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* تغليف الكروت عند الحاجة */
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(30% - 20px); /* عرض الكارت بحيث يظهر 3 كروت في الصف */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 15px;
+  font-style: italic; /* تنسيق النص ليظهر كاقتباس */
+}
+
+.testimonial-card h3 {
+  font-size: 1.2em;
+  color: #002D56;
+  font-weight: bold;
+}
+
+
+
+/* نموذج التواصل */
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#contact button {
+  background-color: #002D56;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact button:hover {
+  background-color: #FFA41C;
+}
+
+#contact textarea {
+  resize: none; /* تعطيل إمكانية تغيير الحجم */
+  overflow-y: auto; /* إضافة شريط تمرير عمودي عند الحاجة */
+  height: 150px; /* تحديد ارتفاع ثابت */
+}
+/* أزرار الاتصال العائمة */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.floating-buttons .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-buttons .button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.floating-buttons .button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ألوان مخصصة */
+.floating-buttons .whatsapp {
+  background-color: #25D366;
+}
+
+.floating-buttons .facebook {
+  background-color: #4267B2;
+}
+
+.floating-buttons .telegram {
+  background-color: #0088cc; /* لون تيليجرام */
+}
+
+
+/* الفوتر */
+footer {
+  background-color: #002D56;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(33.33% - 20px); /* عرض الكروسات في ثلاثة أعمدة حتى على الشاشات الأصغر */
+  }
+  .about-container {
+    flex-direction: column; /* النص والصورة في عمود واحد على الشاشات الصغيرة */
+    text-align: center;
+  }
+
+  .about-image,
+  .about-text {
+    width: 100%; /* النص والصورة يأخذان عرض الحاوية بالكامل */
+  }
+  .pricing-container {
+    flex-direction: column; /* جعل الكروت في عمود واحد على الشاشات الصغيرة */
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 90%; /* عرض الكارت بالكامل تقريبًا على الشاشات الصغيرة */
+  }
+  .testimonial-card {
+    width: calc(45% - 20px); /* عرض الكارت على الشاشات المتوسطة */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* تعديل الكروت الخاصة بـ Pricing */
+  .pricing-card {
+    width: 100%; /* عرض الكارت بالكامل على الشاشة */
+    margin-bottom: 20px; /* مسافة بين الكروت */
+  }
+  /* تعديل كروت Courses */
+  .card {
+    width: 100%; /* عرض الكارت بالكامل */
+    margin-bottom: 20px; /* مسافة بين الكروت */
+  }
+  .testimonial-card {
+    width: 100%; /* عرض الكروت بالكامل على الشاشات الصغيرة */
+  }
+}
+
+/********************Regester********************/
+
+/* صفحة التسجيل */
+.back-btn {
+  background-color: #002D56; /* لون الخلفية */
+  color: white; /* اللون النص */
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #FFA41C; /* لون الخلفية عند التمرير */
+}
+
+#register {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#register h1 {
+  font-size: 2.5em;
+  color: #002D56;
+  margin-bottom: 20px;
+}
+
+#register p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+#registrationForm {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#registrationForm input,
+#registrationForm select,
+#registrationForm textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#registrationForm button {
+  background-color: #002D56;
+  color: white;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#registrationForm button:hover {
+  background-color: #FFA41C;
+}
+
+#registrationForm textarea {
+  resize: none;
+  height: 100px; /* ارتفاع ثابت */
+}
+/* تنسيق حقل العمر */
+#registrationForm input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* أقسام تحديد الجنس */
+.gender-section, .teacher-gender-section {
+  text-align: left;
+}
+.gender-section label, .teacher-gender-section label {
+  font-size: 1em;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.gender-options, .teacher-gender-options {
+  display: flex;
+  flex-wrap: wrap; /* يسمح بالتفاف الخيارات إذا كانت المساحة ضيقة */
+  gap: 15px; /* مسافة بين الخيارات */
+}
+
+.gender-options label, .teacher-gender-options label {
+  font-size: 1em;
+  color: #555;
+  display: flex;
+  align-items: center; /* جعل النص بمحاذاة زر الاختيار عموديًا */
+  gap: 5px; /* مسافة صغيرة بين الزر والنص */
+}
+
+.gender-options input, .teacher-gender-options input {
+  margin-right: 5px;
+}
