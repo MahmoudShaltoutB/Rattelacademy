@@ -197,27 +197,22 @@ header nav a:hover {
   font-size: 1.2em;
   margin-bottom: 30px;
 }
-
-#hero button {
+#button{
   background-color: #002D56;
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 1em;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-#hero button a {  
-  text-decoration: none;
-  color: white;
-}
-
-#hero button:hover {
+#button:hover {
   background-color: white;
   color: #002D56;
-}
+} 
 
 /* الأقسام */
 section {
