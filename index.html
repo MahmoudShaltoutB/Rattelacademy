@@ -34,7 +34,8 @@
     <section id="hero">
       <h1>Welcome to Rattel Academy</h1>
       <p>Learn Quran and Islamic Studies easily and interactively.</p>
-      <button onclick="window.location.href='register.html'">Enroll Now</button>
+      <!-- <button onclick="window.location.href='register.html'">Enroll Now</button> -->
+      <button><a href="https://wa.me/+201117425030">Contact Us Now</a></button>
     </section>
     <section id="about">
       <h2>About Us</h2>
@@ -113,26 +114,26 @@
       </div>
     </section>
     <section id="testimonials">
-      <h2>آراء العملاء</h2>
+      <h2>Customer Reviews</h2>
       <div class="testimonials-container">
         <div class="testimonial-card">
-          <p>“تعلمت كثيرًا مع رتل أكاديمي، طريقة التدريس سهلة ورائعة.”</p>
-          <h3>أحمد محمد</h3>
+          <p>“I learned a lot with Ratal Academy, the teaching method is easy and great.”</p>
+          <h3>Ahmed Mohammed</h3>
         </div>
         <div class="testimonial-card">
-          <p>“دروس مميزة جدًا وأشعر أنني أتحسن في قراءة القرآن كل يوم.”</p>
-          <h3>سارة علي</h3>
+          <p>“Very good lessons and I feel like I am getting better at reading the Quran every day.”</p>
+          <h3>Sarah Ali</h3>
         </div>
         <div class="testimonial-card">
-          <p>“أفضل أكاديمية لتعليم القرآن للأطفال والكبار على حد سواء!”</p>
-          <h3>خالد محمود</h3>
+          <p>“The best Quran learning academy for kids and adults alike!”</p>
+          <h3>Khaled Mahmoud</h3>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="floating-buttons">
-        <a href="https://wa.me/01285339039" target="_blank" class="button whatsapp">
+        <a href="https://wa.me/+201117425030" target="_blank" class="button whatsapp">
           <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
         </a>
         <a href="https://www.facebook.com/rattelAC" target="_blank" class="button facebook">
@@ -144,10 +145,15 @@
       </div>
       
       <h2>Contact Us</h2>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" placeholder="Your Message" required></textarea>
+      <form id="contactForm" action="https://formspree.io/f/xdkalyrl" method="POST">
+        <label>
+          Your email:
+          <input type="email" name="email">
+        </label>
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label>
         <button type="submit">Send</button>
       </form>
     </section>
@@ -155,6 +161,6 @@
   <footer>
     <p>© 2025 Rattel Academy. All rights reserved.</p>
   </footer>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 </body>
 </html>

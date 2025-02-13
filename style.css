@@ -46,6 +46,7 @@ p {
   margin: 0 0 15px;
 }
 
+
 /* الهيدر */
 header {
   text-align: center;
@@ -206,6 +207,11 @@ header nav a:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+#hero button a {  
+  text-decoration: none;
+  color: white;
 }
 
 #hero button:hover {
