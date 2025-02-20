@@ -71,7 +71,7 @@
           { name: "Omar Khaled", text: "Loved it! Highly recommended.", rating: 5 }
         ],
         videos: [
-          { title: "Lesson 1 - Basics of Tajweed", url: "https://www.youtube.com/watch?v=cWivnBXMu-I&ab_channel=RattelAcademyLive" },
+          { title: "Lesson 1 - Basics of Tajweed", url: "https://www.youtube.com/embed/YYYYYYYY" },
           { title: "Lesson 2 - Rules of Noon and Meem", url: "https://www.youtube.com/embed/YYYYYYYY" }
         ]
       },
@@ -98,7 +98,7 @@
         ],
         videos: [
           { title: "Lesson 1 - Arabic Alphabet", url: "https://www.youtube.com/embed/ZZZZZZZZ" },
-          { title: "Lesson 2 - Basic Arabic Grammar", url: "https://www.youtube.com/embed/WWWWWWWW" }
+          { title: "Lesson 2 - Basic Arabic Grammar", url: "https://youtu.be/cWivnBXMu-I?si=ejWb-HkvU_oV-QLc" }
         ]
       },
       "Serah": {
@@ -233,15 +233,23 @@
       }
       // تحديث قسم "دروس الكورس" (مع التحقق)
       const videoContainer = document.getElementById("videos-container");
-      if (coursesData[courseName].videos) {
+      if (coursesData[courseName].videos && coursesData[courseName].videos.length > 0) {
         coursesData[courseName].videos.forEach(video => {
+          let videoUrl = video.url;
+
+          // تحويل أي رابط عادي إلى رابط embed
+          if (videoUrl.includes("watch?v=")) {
+            videoUrl = videoUrl.replace("watch?v=", "embed/");
+          } else if (videoUrl.includes("youtu.be/")) {
+            videoUrl = videoUrl.replace("youtu.be/", "www.youtube.com/embed/");
+          }
+
           const videoElement = document.createElement("div");
           videoElement.innerHTML = `
             <h3>${video.title}</h3>
-            <iframe width="560" height="315" src="${video.url}" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="${videoUrl}" frameborder="0" allowfullscreen></iframe>
           `;
           videoContainer.appendChild(videoElement);
-        
         });
       } else {
         videoContainer.innerHTML = "<p>No videos available yet.</p>";

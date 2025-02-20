@@ -184,7 +184,7 @@ header nav a:hover {
 /* البانر */
 #hero {
   /* background: linear-gradient(#ffc132, #FFA41C); */
-  background: radial-gradient(rgba(252, 154, 8, .95), rgba(248, 166, 42, 0.80)), 
+  background: radial-gradient(rgba(252, 154, 8, .95), rgba(248, 166, 42, 0.70)), 
               url('imges/pattern.jpg'); /* استبدل بالصورة المناسبة */
   color: #002D56;
   text-align: center;
@@ -605,7 +605,7 @@ footer p {
   }
 }
 
-/********************Regester********************/
+/********************Register********************/
 
 /* صفحة التسجيل */
 .back-btn {
@@ -729,12 +729,12 @@ footer p {
   width: 100%;
   height: 500px;
   object-fit: cover;
-  filter: brightness(0.7); /* تغميق الصورة لتحسين وضوح النص */
+  filter: brightness(0.8); /* تغميق الصورة لتحسين وضوح النص */
 }
 
 #course-banner h1 {
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5em;
