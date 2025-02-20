@@ -69,6 +69,10 @@ header .logo {
   font-size: 1.5em;
   font-weight: bold;
 }
+header .logo a{
+  color: white;
+  display: flex;
+}
 header .logo img {
     height: 70px; /* تحجيم الصورة */
     margin-right: 10px; /* المسافة بين الصورة والنص */
@@ -163,9 +167,6 @@ nav ul li a:hover {
   }
 }
 
-
-
-
 /*********************************************//********************/
 
 header nav a {
@@ -182,10 +183,12 @@ header nav a:hover {
 
 /* البانر */
 #hero {
-  background: linear-gradient(#ffc132, #FFA41C);
+  /* background: linear-gradient(#ffc132, #FFA41C); */
+  background: radial-gradient(rgba(252, 154, 8, .95), rgba(248, 166, 42, 0.80)), 
+              url('imges/pattern.jpg'); /* استبدل بالصورة المناسبة */
   color: #002D56;
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 #hero h1 {
@@ -279,19 +282,22 @@ section h2 {
 .card {
   background-color: #fff;
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   margin: 10px;
   width: calc(22.5% - 20px); /* عرض الكروسات بشكل متساوي في ثلاثة أعمدة */
+  height: 380px; /* تحديد ارتفاع ثابت لكل الكروت */
   display: inline-block;
+  justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   text-align: center;
+  overflow: hidden;
 }
 
 .card img {
   width: 100%; /* الصورة هتاخد عرض الكارت بالكامل */
-  height: 250px; /* تحديد ارتفاع الصورة */
+  height: 200px; /* تحديد ارتفاع الصورة */
   object-fit: cover; /* ضبط الصورة بحيث تغطي المساحة المحددة */
   border-radius: 8px 8px 0 0; /* إضافة حواف دائرية للجزء العلوي من الصورة */
   margin-bottom: 15px; /* إضافة مسافة بين الصورة والنص */
@@ -304,7 +310,14 @@ section h2 {
 }
 
 .card p {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: 1em;
   color: #555;
+  padding: 0 10px;
 }
 
 .card:hover {
@@ -409,8 +422,6 @@ section h2 {
   color: #002D56;
   font-weight: bold;
 }
-
-
 
 /* نموذج التواصل */
 #contact form {
@@ -705,4 +716,135 @@ footer p {
 
 .gender-options input, .teacher-gender-options input {
   margin-right: 5px;
+}
+
+/* غلاف الكورس */
+#course-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#course-banner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(0.7); /* تغميق الصورة لتحسين وضوح النص */
+}
+
+#course-banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  color: white;
+}
+
+/* قسم تعريف الكورس */
+#about-course {
+  padding: 40px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#about-course h2 {
+  color: #002D56;
+}
+
+#about-course p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+#course-details {
+  list-style: none;
+  padding: 0;
+}
+
+#course-details li {
+  font-size: 1.1em;
+  color: #333;
+  padding: 5px;
+}
+
+/* قسم الفيديوهات */
+#course-videos {
+  padding: 40px;
+  text-align: center;
+}
+
+#course-videos h2 {
+  color: #002D56;
+}
+
+#videos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#videos-container div {
+  width: 45%;
+  text-align: center;
+}
+
+#videos-container iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+/* تصميم متجاوب للشاشات الصغيرة */
+@media (max-width: 768px) {
+  #course-banner h1 {
+    font-size: 2em;
+  }
+
+  #videos-container div {
+    width: 100%;
+  }
+}
+/* ماذا ستتعلم؟ */
+#learning-outcomes {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#learning-points {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#learning-points li {
+  font-size: 1.1em;
+  margin: 5px 0;
+  color: #333;
+}
+
+/* تقييمات الطلاب */
+#reviews {
+  padding: 40px;
+  text-align: center;
+}
+
+.review-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.review-card p {
+  font-size: 1em;
+  color: #555;
 }

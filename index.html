@@ -10,18 +10,7 @@
 <body>
   <header>
     <div class="logo"><img src="imges/Rattel_Transperant.png">Rattel Academy</div>
-    <!--<nav>
-      <a href="#about">About</a>
-      <a href="#courses">Courses</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact Us</a>
-    </nav>-->
     <nav>
-      <!-- <div class="menu-toggle" id="menu-toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div> -->
       <ul id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#courses">Courses</a></li>
@@ -50,35 +39,36 @@
     <section id="courses">
       <h2>Our Courses</h2>
       <div>
-        <div class="card">
+        <div class="card" onclick="openCourse('Quran')">
           <img src="imges/Courses/Quran.png" alt="Quran" class="course-image">
           <h3>Quran</h3>
           <p>Learn Quran in a simple and effective way.</p>
         </div>
-        <div class="card">
+        
+        <div class="card" onclick="openCourse('Arabic')">
           <img src="imges/Courses/Arabic.png" alt="Arabic" class="course-image">
           <h3>Arabic</h3>
-          <p>Islamic studies for beginners and advanced learners.</p>
+          <p>Master the Arabic language and understand Islamic texts with ease!</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="openCourse('Serah')">
           <img src="imges/Courses/Serah.png" alt="Serah" class="course-image">
           <h3>Serah</h3>
-          <p>Interactive courses to help you master your studies.</p>
+          <p>Journey through the life of (PBUH) and discover the lessons that shape our faith.</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="openCourse('Islamic Studies')">
           <img src="imges/Courses/Islamic Studies.png" alt="Islamic Studies" class="course-image">
           <h3>Islamic Studies</h3>
-          <p>Interactive courses to help you master your studies.</p>
+          <p>Deepen your understanding of Islam through a structured and comprehensive approach.</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="openCourse('Tajweed')">
           <img src="imges/Courses/Tajweed.png" alt="Tajweed" class="course-image">
           <h3>Tajweed</h3>
-          <p>Interactive courses to help you master your studies.</p>
+          <p>Perfect your Quran recitation with proper Tajweed rules and pronunciation.</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="openCourse('Nour-Albian')">
           <img src="imges/Courses/Nour-Albian.png" alt="Nour-Albian" class="course-image">
           <h3>Nour-Albian</h3>
-          <p>Interactive courses to help you master your studies.</p>
+          <p>Master Quranic reading with the proven Nour Al-Bayan method!</p>
         </div>
       </div>
     </section>
@@ -139,7 +129,7 @@
         <a href="https://www.facebook.com/rattelAC" target="_blank" class="button facebook">
           <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook">
         </a>
-        <a href="https://t.me/username" target="_blank" class="button telegram">
+        <a href="https://t.me/Rattelacademylive" target="_blank" class="button telegram">
           <img src="https://img.icons8.com/color/48/telegram-app.png" alt="Telegram">
         </a>
       </div>
@@ -161,6 +151,6 @@
   <footer>
     <p>© 2025 Rattel Academy. All rights reserved.</p>
   </footer>
-  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
 </body>
 </html>
