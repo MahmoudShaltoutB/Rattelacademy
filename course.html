@@ -14,7 +14,7 @@
   <!-- غلاف الكورس -->
   <section id="course-banner">
     <img id="course-image" src="" alt="Course Image">
-    <h1 id="course-title"></h1>
+    <!-- <h1 id="course-title"></h1> -->
   </section>
 
   <!-- قسم تعريف الكورس -->
@@ -49,7 +49,6 @@
     // بيانات الكورسات
     const coursesData = {
       "Quran": {
-        title: "Quran Course",
         image: "imges/Courses/Quran.png",
         description: "Learn the Quran with proper Tajweed rules and deep understanding.",
         details: [
@@ -76,7 +75,6 @@
         ]
       },
       "Arabic": {
-        title: "Arabic Language Course",
         image: "imges/Courses/Arabic.png",
         description: "Master Arabic to understand Islamic texts fluently.",
         details: [
@@ -102,7 +100,6 @@
         ]
       },
       "Serah": {
-        title: "Serah Course",
         image: "imges/Courses/Serah.png",
         description: "Explore the inspiring life of Prophet Muhammad (PBUH) from his early years to his prophethood and beyond. Understand the key events, challenges, and victories that shaped Islamic history and gain valuable lessons for modern life.",
         details: [
@@ -124,7 +121,6 @@
         ]
       },
       "Islamic Studies": {
-        title: "Islamic Studies Course",
         image: "imges/Courses/Islamic Studies.png",
         description: "Gain profound knowledge of Islamic beliefs, practices, and history. This course covers essential topics like Aqeedah, Fiqh, Hadith, and Islamic ethics, helping you strengthen your faith and apply Islamic principles in daily life.",
         details: [
@@ -146,7 +142,6 @@
         ]
       },
       "Tajweed": {
-        title: "Tajweed Course",
         image: "imges/Courses/Tajweed.png",
         description: "Master the art of Quranic recitation by learning the rules of Tajweed. This course helps you improve your pronunciation, clarity, and fluency, ensuring that you recite the Quran as it was revealed.",
         details: [
@@ -168,7 +163,6 @@
         ]
       },
       "Nour-Albian": {
-        title: "Nour-Albian Course",
         image: "imges/Courses/Nour-Albian.png",
         description: "Learn to read the Quran fluently by mastering Arabic phonetics and pronunciation. This course follows the Nour Al-Bayan method, which simplifies Quranic reading for beginners and enhances fluency for advanced learners.",
         details: [
@@ -193,7 +187,7 @@
 
     // تحديث الصفحة بمحتوى الكورس
     if (coursesData[courseName]) {
-      document.getElementById("course-title").innerText = coursesData[courseName].title;
+      // document.getElementById("course-title").innerText = coursesData[courseName].title;
       document.getElementById("course-image").src = coursesData[courseName].image;
       document.getElementById("course-description").innerText = coursesData[courseName].description;
 
